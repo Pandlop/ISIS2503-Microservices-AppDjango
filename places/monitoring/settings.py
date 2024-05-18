@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': os.environ.get("MEASUREMENTS_DB", "measurements_db"),
         'USER': os.environ.get("MEASUREMENTS_DB_USER", "measurements_user"),
         'PASSWORD': os.environ.get("MEASUREMENTS_DB_PASSWD", "isis2503"),
-        'HOST': os.environ.get("MEASUREMENTS_DB_HOST", "10.128.0.87"),
+        'HOST': os.environ.get("MEASUREMENTS_DB_HOST", "10.128.0.83"),
         'PORT': os.environ.get("MEASUREMENTS_DB_PORT", "5432")
     }
 }
