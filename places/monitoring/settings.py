@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'measurements',
+    'places',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': os.environ.get("MEASUREMENTS_DB", "measurements_db"),
         'USER': os.environ.get("MEASUREMENTS_DB_USER", "measurements_user"),
         'PASSWORD': os.environ.get("MEASUREMENTS_DB_PASSWD", "isis2503"),
-        'HOST': os.environ.get("MEASUREMENTS_DB_HOST", "10.128.0.83"),
+        'HOST': os.environ.get("MEASUREMENTS_DB_HOST", "10.128.0.87"),
         'PORT': os.environ.get("MEASUREMENTS_DB_PORT", "5432")
     }
 }
@@ -134,4 +134,3 @@ STATICFILES_DIRS = (
 )
 
 PATH_VAR = "http://" + os.environ.get("VARIABLES_HOST", "10.128.0.84") + ":" + os.environ.get("VARIABLES_PORT", "8080") + "/variables"
-PATH_VAR_2 = "http://10.128.0.86:8080/places"
