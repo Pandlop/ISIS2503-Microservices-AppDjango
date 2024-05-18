@@ -10,8 +10,8 @@ class Measurement(models.Model):
         return '%s %s' % (self.value, self.unit)
     
 class Place(models.Model):
-    measurements = models.ManyToManyField(Measurement, null=True)
+    measurements = models.ManyToOneRel(Measurement)
     name = models.CharField(max_length=50)
 
     def __str__(self):
-        return '%s %s' % (self.value, self.unit)
+        return '%s %s' % (self.measurements, self.name)
