@@ -18,7 +18,6 @@ def PlaceCreate(request):
         data = request.body.decode('utf-8')
         data_json = json.loads(data)
         place = Place()
-        place.measurements = data_json['measurements']
         place.name = data_json['name']
         place.save()
         return HttpResponse("successfully created place")
@@ -31,7 +30,6 @@ def PlacesCreate(request):
         place_list = []
         for place in data_json:
                     db_place = Place()
-                    db_place.measurements = place['measurements']
                     db_place.name = place['name']
                     place_list.append(db_place)
         
